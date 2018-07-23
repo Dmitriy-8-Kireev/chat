@@ -1,4 +1,5 @@
 import React, { Component, Fragment } from 'react';
+import Chat from './components/Chat/Chat';
 import Title from './components/Title';
 
 class App extends Component {
@@ -7,6 +8,7 @@ class App extends Component {
       <Fragment>
         <div className="App">
           <Title />
+          <Chat />
         </div>
       </Fragment>
     );
