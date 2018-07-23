@@ -13,7 +13,11 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
-    "check-prettier":
-      "prettier --config ./.prettierrc --list-different src/**/*.js"
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
+    "check-prettier": "prettier --config ./.prettierrc --list-different src/**/*.js"
+  },
+  "devDependencies": {
+    "gh-pages": "^1.2.0"
   }
 }
