@@ -3,10 +3,11 @@ import './Message.css';
 
 class Message extends Component {
   render() {
+    const {text, date} = this.props;
     return (
       <Fragment>
-        <span className="message">{this.props.text}</span>
-        <span className="time">{this.props.date}</span>
+        <span className="message">{text}</span>
+        <span className="time">{date}</span>
       </Fragment>
     );
   }
