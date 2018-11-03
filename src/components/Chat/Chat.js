@@ -14,11 +14,16 @@ class Chat extends Component {
   };
   sendMessageOnEnter = e => {
     let time = new Date();
+    let index = Math.random();
     if (e.key === 'Enter' && this.state.messageInput !== '') {
       this.setState({
         messages: [
           ...this.state.messages,
-          { text: this.state.messageInput, date: time.toLocaleTimeString() }
+          {
+            text: this.state.messageInput,
+            date: time.toLocaleTimeString(),
+            key: index
+          }
         ]
       });
       this.setState({ messageInput: '' });
@@ -31,11 +36,7 @@ class Chat extends Component {
           <div className="messages">
             {this.state.messages.map((message, index) => {
               return (
-                <Message
-                  key={Math.random()}
-                  text={message.text}
-                  date={message.date}
-                />
+                <Message key={index} text={message.text} date={message.date} />
               );
             })}
           </div>
