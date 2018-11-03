@@ -24,7 +24,6 @@ class Chat extends Component {
       this.setState({ messageInput: '' });
     }
   };
-
   render() {
     return (
       <div className="chat">
@@ -41,7 +40,6 @@ class Chat extends Component {
             })}
           </div>
         </div>
-
         <input
           className="input-message"
           value={this.state.messageInput}
